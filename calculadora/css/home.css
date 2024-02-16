@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
 html, body {
     height: 100%;
 }
@@ -145,6 +146,7 @@ header{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .box-info-single{
@@ -155,8 +157,83 @@ header{
     width: 100%;
     margin: 0 10px;
     padding: 30px;
+    
 }
 
 .box-info-single i{
     font-size: 28px;
+}
+
+
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.grid-produtos{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    
+}
+.section-title-produtos {
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #d6dce4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.input-group-produtos {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.input-group-produtos label {
+    flex: 1;
+    font-size: 14px;
+    color: #657c9a;
+}
+.input-group-produtos input {
+    flex: 2;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccd5e1;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.input-group-produtos input[type="number"] {
+    -moz-appearance: textfield;
+}
+.input-group-produtos input::-webkit-inner-spin-button,
+.input-group-produtos input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input-group-produtos-addon {
+    background: #f4f7fa;
+    border: 1px solid #ccd5e1;
+    padding: 6px 12px;
+    color: #657c9a;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+.btn-calcular-produtos {
+    display: block;
+    width: 100%;
+    background: #0056b3;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.btn-calcular-produtos:hover {
+    background-color: #003d82;
 }
