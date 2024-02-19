@@ -210,10 +210,6 @@ header {
     margin-left: 10px;
 }
 
-.input-group-produtos input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 .input-group-produtos input::-webkit-inner-spin-button,
 .input-group-produtos input::-webkit-outer-spin-button {
     -webkit-appearance: none;
