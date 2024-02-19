@@ -5,69 +5,71 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
-header{
+
+header {
     background-color: #eb8cc5;
     padding: 8px 2%;
     display: flex;
     justify-content: space-between;
 }
 
-.info-header{
+.info-header {
     color: white;
     display: flex;
     justify-content: space-around;
     width: 200px;
 }
 
-.info-header img{
+.info-header img {
     width: 40px;
     height: 40px;
     border-radius: 20px;
     margin: 0 8px;
 }
 
-.info-header i{
+.info-header i {
     margin: 0 10px;
 }
 
-.icons-header{
+.icons-header {
     display: flex;
     margin-left: 10px;
     align-items: center;
 }
 
-.icons-header svg{
+.icons-header svg {
     cursor: pointer;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo h3{
+.logo h3 {
     font-size: 12px;
     cursor: pointer;
 }
 
-.logo h3:hover{
+.logo h3:hover {
     opacity: 0.7;
 }
 
-.logo img{
+.logo img {
     width: 40px;
     height: 40px;
     border-radius: 20px;
     margin: 0 8px;
 }
 
-.main{
+.main {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;    
+    height: 100%;
 }
 
 .sidebar {
@@ -76,80 +78,80 @@ header{
     height: 100%;
 }
 
-.sidebar a.sidebar-active{
+.sidebar a.sidebar-active {
     border-left: 4px solid #eb8cc5;
     background-color: rgb(245, 245, 245);
     color: #777;
     font-weight: bold;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
     border-left: 4px solid #eb8cc5;
     background-color: rgb(245, 245, 245);
     color: #777;
     font-weight: bold;
 }
 
-.sidebar a.sidebar-active > svg{
+.sidebar a.sidebar-active>svg {
     color: #777;
 }
 
-.sidebar h3{
+.sidebar h3 {
     color: #333;
     font-size: 20px;
     margin: 10px;
 }
 
-.sidebar a{
+.sidebar a {
     display: block;
     text-decoration: none;
     padding: 10px 15px;
     color: #444;
 }
 
-.sidebar a > svg{
+.sidebar a>svg {
     color: #444;
 }
 
-.content{
+.content {
     width: 85%;
     background-color: rgb(245, 245, 245);
     padding: 20px;
 }
 
-.titulo-secao{
+.titulo-secao {
     border-radius: 10px;
     background-color: white;
     padding: 10px;
 }
 
-.titulo-secao h2{
+.titulo-secao h2 {
     font-size: 19px;
 }
 
-.titulo-secao p{
+.titulo-secao p {
     font-size: 14px;
 }
 
-.titulo-secao i{
+.titulo-secao i {
     color: #f7bee0;
 }
 
-.separator{
+.separator {
     width: 100%;
     height: 1px;
-    background-color: rgb(240,240,240);
+    background-color: rgb(240, 240, 240);
 }
 
-.box-info{
+.box-info {
     width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
-.box-info-single{
+.box-info-single {
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
@@ -157,27 +159,28 @@ header{
     width: 100%;
     margin: 0 10px;
     padding: 30px;
-    
+
 }
 
-.box-info-single i{
+.box-info-single i {
     font-size: 28px;
 }
 
 
 .container-produtos {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-.grid-produtos{
+.grid-produtos {
     background: white;
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
-    
+
 }
+
 .section-title-produtos {
     font-size: 18px;
     color: #333;
@@ -185,16 +188,19 @@ header{
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
 .input-group-produtos {
     display: flex;
     margin-bottom: 15px;
     align-items: center;
 }
+
 .input-group-produtos label {
     flex: 1;
     font-size: 14px;
     color: #657c9a;
 }
+
 .input-group-produtos input {
     flex: 2;
     padding: 8px;
@@ -203,14 +209,17 @@ header{
     border-radius: 4px;
     margin-left: 10px;
 }
+
 .input-group-produtos input[type="number"] {
     -moz-appearance: textfield;
 }
+
 .input-group-produtos input::-webkit-inner-spin-button,
 .input-group-produtos input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .input-group-produtos-addon {
     background: #f4f7fa;
     border: 1px solid #ccd5e1;
@@ -221,6 +230,7 @@ header{
     margin-left: -1px;
     cursor: pointer;
 }
+
 .btn-calcular-produtos {
     display: block;
     width: 100%;
@@ -234,6 +244,7 @@ header{
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
+
 .btn-calcular-produtos:hover {
     background-color: #003d82;
 }
@@ -244,33 +255,37 @@ header{
     align-items: center;
     position: relative;
     padding: 8px 0;
-  }
-  
-  .campo-container .label {
+}
+
+.campo-container .label {
     flex-grow: 1;
-    white-space: nowrap; /* Previne que o rótulo quebre a linha */
-  }
-  
-  .campo-container .label::after {
+    white-space: nowrap;
+    /* Previne que o rótulo quebre a linha */
+}
+
+.campo-container .label::after {
     content: '';
     display: block;
     flex-grow: 1;
-    border-bottom: 1px dotted #000; /* Cria a linha de pontos */
-    margin: 0 8px; /* Espaço entre o rótulo e os pontos */
-  }
-  
-  .campo-container label {
+    border-bottom: 1px dotted #000;
+    /* Cria a linha de pontos */
+    margin: 0 8px;
+    /* Espaço entre o rótulo e os pontos */
+}
+
+.campo-container label {
     flex: 1;
     font-size: 14px;
     color: #657c9a;
-  }
-  
-  .campo-estilizado {
-    /* seus estilos existentes para campo-estilizado */
-    flex-shrink: 0; /* Previne que o campo encolha */
-  }
+}
 
-  table {
+.campo-estilizado {
+    /* seus estilos existentes para campo-estilizado */
+    flex-shrink: 0;
+    /* Previne que o campo encolha */
+}
+
+table {
     border-spacing: 1;
     border-collapse: collapse;
     background: transparent;
@@ -279,78 +294,82 @@ header{
     width: 100%;
     margin: 0 auto;
     position: relative
-  }
-  
-  table * {
+}
+
+table * {
     position: relative
-  }
-  
-  table td,
-  table th {
+}
+
+table td,
+table th {
     padding-left: 8px
-  }
-  
-  table thead tr { 
+}
+
+table thead tr {
     font-size: 10px;
     height: 20px;
     background: #dca2f7
-  }
-  
-  
-  table tbody tr {
+}
+
+
+table tbody tr {
     height: 30px
-  }
-  
-  table tbody tr:last-child {
+}
+
+table tbody tr:last-child {
     border: 0
-  }
-  
-  table td,
-  table th {
+}
+
+table td,
+table th {
     text-align: left
-  }
-  
-  table td.l,
-  table th.l {
+}
+
+table td.l,
+table th.l {
     text-align: right
-  }
-  
-  table td.c,
-  table th.c {
+}
+
+table td.c,
+table th.c {
     text-align: center
-  }
-  
-  table td.r,
-  table th.r {
+}
+
+table td.r,
+table th.r {
     text-align: center
-  }
-  
-  tbody tr:nth-child(even) {
+}
+
+tbody tr:nth-child(even) {
     background-color: #f5f5f5
-  }
-  
-  tbody tr {
+}
+
+tbody tr {
     font-family: OpenSans-Regular;
     font-size: 12px;
     color: rgb(8, 8, 8);
     line-height: 1.2;
     font-weight: unset
-  }
+}
 
-  .container-lucro {
+.container-lucro {
     display: flex;
-    justify-content: space-between; /* Isso empurrará o .valor-lucro para a direita */
+    justify-content: space-between;
+    /* Isso empurrará o .valor-lucro para a direita */
     align-items: center;
-    width: 100%; /* Isso faz com que o contêiner preencha toda a célula da tabela */
-  }
-  
-  .textos-lucro p {
-    margin: 0; /* Isso garante que não haja espaço entre os elementos <p> */
-  }
+    width: 100%;
+    /* Isso faz com que o contêiner preencha toda a célula da tabela */
+}
 
-  .valor-lucro {
-    font-size: 30px; /* Tamanho maior para o valor */
+.textos-lucro p {
+    margin: 0;
+    /* Isso garante que não haja espaço entre os elementos <p> */
+}
+
+.valor-lucro {
+    font-size: 30px;
+    /* Tamanho maior para o valor */
     /* Se você precisar que o .valor-lucro esteja mais à direita, você pode adicionar 'margin-left: auto;' */
-    margin-left: auto; /* Isso empurrará o .valor-lucro para a extrema direita dentro do .container-lucro */
-  }
-  
+    margin-left: auto;
+    /* Isso empurrará o .valor-lucro para a extrema direita dentro do .container-lucro */
+}
