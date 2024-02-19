@@ -122,8 +122,7 @@ function toggleTooltip() {
       cenarioVariavel();  
       calcularPrecoVenda(); // Chama a função para calcular o preço de venda
       //calculaPontoEquilibrio();
-      cenarioFixo();
-        
+      cenarioFixo();        
       //graficoFixo();
     });
 });
