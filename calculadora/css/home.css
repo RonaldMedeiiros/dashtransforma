@@ -237,3 +237,120 @@ header{
 .btn-calcular-produtos:hover {
     background-color: #003d82;
 }
+
+.campo-container {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px 0;
+  }
+  
+  .campo-container .label {
+    flex-grow: 1;
+    white-space: nowrap; /* Previne que o rótulo quebre a linha */
+  }
+  
+  .campo-container .label::after {
+    content: '';
+    display: block;
+    flex-grow: 1;
+    border-bottom: 1px dotted #000; /* Cria a linha de pontos */
+    margin: 0 8px; /* Espaço entre o rótulo e os pontos */
+  }
+  
+  .campo-container label {
+    flex: 1;
+    font-size: 14px;
+    color: #657c9a;
+  }
+  
+  .campo-estilizado {
+    /* seus estilos existentes para campo-estilizado */
+    flex-shrink: 0; /* Previne que o campo encolha */
+  }
+
+  table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative
+  }
+  
+  table * {
+    position: relative
+  }
+  
+  table td,
+  table th {
+    padding-left: 8px
+  }
+  
+  table thead tr { 
+    font-size: 10px;
+    height: 20px;
+    background: #dca2f7
+  }
+  
+  
+  table tbody tr {
+    height: 30px
+  }
+  
+  table tbody tr:last-child {
+    border: 0
+  }
+  
+  table td,
+  table th {
+    text-align: left
+  }
+  
+  table td.l,
+  table th.l {
+    text-align: right
+  }
+  
+  table td.c,
+  table th.c {
+    text-align: center
+  }
+  
+  table td.r,
+  table th.r {
+    text-align: center
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f5f5f5
+  }
+  
+  tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 12px;
+    color: rgb(8, 8, 8);
+    line-height: 1.2;
+    font-weight: unset
+  }
+
+  .container-lucro {
+    display: flex;
+    justify-content: space-between; /* Isso empurrará o .valor-lucro para a direita */
+    align-items: center;
+    width: 100%; /* Isso faz com que o contêiner preencha toda a célula da tabela */
+  }
+  
+  .textos-lucro p {
+    margin: 0; /* Isso garante que não haja espaço entre os elementos <p> */
+  }
+
+  .valor-lucro {
+    font-size: 30px; /* Tamanho maior para o valor */
+    /* Se você precisar que o .valor-lucro esteja mais à direita, você pode adicionar 'margin-left: auto;' */
+    margin-left: auto; /* Isso empurrará o .valor-lucro para a extrema direita dentro do .container-lucro */
+  }
+  
