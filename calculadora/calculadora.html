@@ -112,142 +112,236 @@
                         <input type="number" id="porcentagemLucroInput" placeholder="00%">
                     </div>
 
-                    <!-- Repita a estrutura para os outros campos conforme necessário -->
-
-                    <div class="section-title-produtos"></div> <!-- div caso necessite adicionar mais alguma informação -->
-                    <!-- Campos para custos de transação -->
-
+                    <div class="section-title-produtos"></div>
+                    <!-- div caso necessite adicionar mais alguma informação -->
                     <button id="btn-calcular" class="btn-calcular-produtos" type="button">CALCULAR</button>
-                </div>
-                <div class="grid-produtos">
-                    <div class="section-title-produtos">Etapa 2 - Preço de Venda e PE</div>
-                    <div class="campo-container">
-                        <label class="label">Custo de Aquisição:</label>
-                        <span id="cenarioCustoAquisicao" class="campo-estilizado"></span>
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Custo Variável:</label>
-                        <span id="cenarioPercentualCusto" class="campo-estilizado"></span>
-                        %
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Despesa Fixa:</label>
-                        <span id="cenarioDespesaFixa" class="campo-estilizado"></span>
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Receita Mensal:</label>
-                        <span id="cenarioReceitaMensal" class="campo-estilizado"></span>
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Margem de Lucro Desejada:</label>
-                        <span id="cenarioPorcentagemLucro" class="campo-estilizado"></span>
-                        %
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Preço de Venda Ideal:</label>
-                        <span id="precoVenda" class="campo-estilizado"></span>
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Ponto de Equilíbrio:</label>
-                        <span id="pontoEquilibrioReal" class="campo-estilizado"></span>
-                      </div>
-                      <div class="campo-container">
-                        <label class="label">Ponto de Equilíbrio Unidade:</label>
-                        <span id="pontoEquilibrioUnidade" class="campo-estilizado"></span>
-                      </div>
-                    <!-- Repita a estrutura para os outros campos conforme necessário -->
+                    <div class="section-title-produtos"></div>
+                    <div class="grid-produtos">
+                        <div class="section-title-produtos">Etapa 2 - Preço de Venda e PE</div>
+                        <div class="campo-container">
+                            <label class="label">Custo de Aquisição:</label>
+                            <span id="cenarioCustoAquisicao" class="campo-estilizado"></span>
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Custo Variável:</label>
+                            <span id="cenarioPercentualCusto" class="campo-estilizado"></span>
+                            %
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Despesa Fixa:</label>
+                            <span id="cenarioDespesaFixa" class="campo-estilizado"></span>
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Receita Mensal:</label>
+                            <span id="cenarioReceitaMensal" class="campo-estilizado"></span>
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Margem de Lucro Desejada:</label>
+                            <span id="cenarioPorcentagemLucro" class="campo-estilizado"></span>
+                            %
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Preço de Venda Ideal:</label>
+                            <span id="precoVenda" class="campo-estilizado"></span>
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Ponto de Equilíbrio:</label>
+                            <span id="pontoEquilibrioReal" class="campo-estilizado"></span>
+                        </div>
+                        <div class="campo-container">
+                            <label class="label">Ponto de Equilíbrio Unidade:</label>
+                            <span id="pontoEquilibrioUnidade" class="campo-estilizado"></span>
+                        </div>
+                        <!-- Repita a estrutura para os outros campos conforme necessário -->
 
-                    <div class="section-title-produtos"></div> <!-- div caso necessite adicionar mais alguma informação -->
-                    <!-- Campos para custos de transação -->
+                        <div class="section-title-produtos"></div>
+                        <!-- div caso necessite adicionar mais alguma informação -->
+                        <!-- Campos para custos de transação -->
+                    </div>
+
+
                 </div>
+
                 <div class="grid-produtos">
-                    <div class="section-title-produtos">Etapa 3 - Valores por Produto Individual</div>
+                    <div class="section-title-produtos">Tabela Fixa - Preço Individual</div>
+                    <div class="input-group-produtos">
+                        <label class="outrovalor" id="unidadeVendidaFixo">Preço por unidade: </label>
+                        <input type="number" id="unidadeFixa" value="1" readonly />
+                    </div>
+                    <div class="section-title-produtos"></div>
                     <table>
                         <!-- Cabeçalho da tabela -->
                         <thead class="tabela-interna">
-                          <tr>
-                            <th></th>
-                            <th  style="text-align: right;">Valor</th>
-                            <th  style="text-align: right;">Porcentagem</th>
-                          </tr>
+                            <tr>
+                                <th></th>
+                                <th style="text-align: right;">Valor</th>
+                                <th style="text-align: right;">Porcentagem</th>
+                            </tr>
                         </thead>
                         <!-- Corpo da tabela -->
                         <tbody class="tabela-interna">
-                          <!-- Linhas normais -->
-                          <tr>
-                            <td class="indice-tabela">Preço de Venda</td>
-                            <td style="text-align: right; width: 80px;"><span id="precoVenda1"></span></td>
-                            <td style="text-align: right; width: 80px;">100%</td>
-      
-                          </tr>
-                          <tr>
-                            <td class="indice-tabela">Custos de Aquisição</td>
-                            <td style="text-align: right;"><span id="cenarioCustoAquisicao1"></span></td>
-                            <td style="text-align: right;"><span id="custoAquisicaoFixo"></span></td>
-      
-                          </tr>
-                          <tr>
-                            <td class="indice-tabela">Custos Variáveis</td>
-                            <td style="text-align: right;"><span id="custoVariavelFixo"></span></td>
-                            <td style="text-align: right;"><span id="custoVariavelFixoPorcentagem"></span></td>
-      
-                          </tr>
-                          <tr>
-                            <td class="indice-tabela">Margem de Contribuição</td>
-                            <td style="text-align: right;"><span id="margemContribuicaoFixa"></span></td>
-                            <td style="text-align: right;"><span id="margemContribuicaoFixaPorcentagem"></span></td>
-      
-                          </tr>
-                          <tr>
-                            <td class="indice-tabela">% de Despesas Fixas</td>
-                            <td style="text-align: right;"><span id="porcentagemDespesaFixaFixo"></td>
-                            <td style="text-align: right;"><span id="porcentagemDespesaFixaFixoPorcento"></td>
-      
-                          </tr>
-                          <tr>
-                            <td class="indice-tabela">Margem de Lucro</td>
-                            <td style="text-align: right;"><span id="margemLucroFixo"></td>
-                            <td style="text-align: right;"><span id="margemLucroFixoPorcentagem"></td>
-      
-                          </tr>
-                          <tr>
-                            <td class="indice-tabela">Mark-up Multiplicador</td>
-                            <td colspan="2" style="text-align: center;"><span id="markup"></td>
-                          </tr>
-      
-                          <!-- Últimas duas linhas para resultados, sem as 3 primeiras colunas -->
-                          <tr>
-                            <td colspan="3">
-                              <div class="container-lucro">
-                                <div class="textos-lucro">
-                                  <p>Margem Lucro</p>
-                                  <p style="text-align: right;">%</p>
-                                </div>
-                                <span id="margemLucroFixoPorcentagem1" class="valor-lucro"></span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td colspan="3">
-                              <div class="container-lucro">
-                                <div class="textos-lucro">
-                                  <p>Margem Lucro</p>
-                                  <p style="text-align: right;">R$</p>
-                                </div>
-                                <span id="margemLucroFixo1" class="valor-lucro"></span>
-                              </div>
-                            </td>
-                          </tr>
+                            <!-- Linhas normais -->
+                            <tr>
+                                <td class="indice-tabela">Preço de Venda</td>
+                                <td style="text-align: right; width: 80px;"><span id="precoVenda1"></span></td>
+                                <td style="text-align: right; width: 80px;"><span id="cemPorCento"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Custos de Aquisição</td>
+                                <td style="text-align: right;"><span id="cenarioCustoAquisicao1"></span></td>
+                                <td style="text-align: right;"><span id="custoAquisicaoFixo"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Custos Variáveis</td>
+                                <td style="text-align: right;"><span id="custoVariavelFixo"></span></td>
+                                <td style="text-align: right;"><span id="custoVariavelFixoPorcentagem"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Margem de Contribuição</td>
+                                <td style="text-align: right;"><span id="margemContribuicaoFixa"></span></td>
+                                <td style="text-align: right;"><span id="margemContribuicaoFixaPorcentagem"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">% de Despesas Fixas</td>
+                                <td style="text-align: right;"><span id="porcentagemDespesaFixaFixo"></td>
+                                <td style="text-align: right;"><span id="porcentagemDespesaFixaFixoPorcento"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Margem de Lucro</td>
+                                <td style="text-align: right;"><span id="margemLucroFixo"></td>
+                                <td style="text-align: right;"><span id="margemLucroFixoPorcentagem"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Mark-up Multiplicador</td>
+                                <td colspan="2" style="text-align: center;"><span id="markup"></td>
+                            </tr>
+
+                            <!-- Últimas duas linhas para resultados, sem as 3 primeiras colunas -->
+                            <tr>
+                                <td colspan="3">
+                                    <div class="container-lucro">
+                                        <div class="textos-lucro">
+                                            <p>Margem Lucro</p>
+                                            <p style="text-align: right;">%</p>
+                                        </div>
+                                        <span id="margemLucroFixoPorcentagem1" class="valor-lucro"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="container-lucro">
+                                        <div class="textos-lucro">
+                                            <p>Margem Lucro</p>
+                                            <p style="text-align: right;">R$</p>
+                                        </div>
+                                        <span id="margemLucroFixo1" class="valor-lucro"></span>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                     <!-- Repita a estrutura para os outros campos conforme necessário -->
 
-                    <div class="section-title-produtos"></div> <!-- div caso necessite adicionar mais alguma informação -->
+                    <div class="section-title-produtos"></div>
+                    <!-- div caso necessite adicionar mais alguma informação -->
+                    <!-- Campos para custos de transação -->
+                </div>
+                <div class="grid-produtos">
+                    <div class="section-title-produtos">Tabela Variável - Preço por quantidade</div>
+                    <div class="input-group-produtos">
+                        <label class="outrovalor" id="unidadeVendidaVariavel">Unidades Vendidas: </label>
+                        <input type="number" id="unidadeVariavel" placeholder="Unidades" />
+                    </div>
+                    <div class="section-title-produtos"></div>
+                    <table>
+                        <thead class="tabela-interna">
+                            <tr>
+                                <th></th>
+                                <th style="text-align: right;">Valor</th>
+                                <th style="text-align: right;">Porcentagem</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabela-interna">
+                            <tr>
+                                <td class="indice-tabela">Preço de Venda</td>
+                                <td style="text-align: right; width: 80px;"><span id="precoVendaVariavel"></span></td>
+                                <td style="text-align: right; width: 80px;"><span id="cemPorCento1"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Custos de Aquisição</td>
+                                <td style="text-align: right;"><span id="custoAquisicaoVariavel"></span></td>
+                                <td style="text-align: right;"><span id="custoAquisicaoVariavelPorcentagem"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Custos Variáveis</td>
+                                <td style="text-align: right;"><span id="custoVariavelVariavel"></span></td>
+                                <td style="text-align: right;"><span id="porcentagemCustoVariavel"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Margem de Contribuição</td>
+                                <td style="text-align: right;"><span id="margemContribuicaoVariavel"></span></td>
+                                <td style="text-align: right;"><span id="margemContribuicaoVariavelPorcentagem"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">% de Despesas Fixas</td>
+                                <td style="text-align: right;"><span id="porcentagemDespesaFixaVariavel"></td>
+                                <td style="text-align: right;"><span id="porcentagemDespesaFixaVariavelPorcento"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Margem de Lucro</td>
+                                <td style="text-align: right;"><span id="margemLucroVariavel"></td>
+                                <td style="text-align: right;"><span id="margemLucroVariavelPorcentagem"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="indice-tabela">Mark-up Multiplicador</td>
+                                <td colspan="2" style="text-align: center;"><span id="markup2"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="container-lucro">
+                                        <div class="textos-lucro">
+                                            <p>Margem Lucro</p>
+                                            <p style="text-align: right;">%</p>
+                                        </div>
+                                        <span id="margemLucroVariavelPorcentagem2" class="valor-lucro"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="container-lucro">
+                                        <div class="textos-lucro">
+                                            <p>Margem Lucro</p>
+                                            <p style="text-align: right;">R$</p>
+                                        </div>
+                                        <span id="margemLucroVariavel2" class="valor-lucro"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="section-title-produtos"></div>
+                    <!-- div caso necessite adicionar mais alguma informação -->
                     <!-- Campos para custos de transação -->
                 </div>
             </div>
             <div class="container-produtos">
-                
+
             </div>
 
         </div><!--content-->

@@ -77,7 +77,7 @@ function toggleTooltip() {
     custoDeAquisicao = parseFloat(this.value) || 0;
     // Atualiza a exibição dos valores e recalcula os resultados.
     document.getElementById('cenarioCustoAquisicao').textContent = formatarValorMonetario(custoDeAquisicao);
-    document.getElementById('cenarioCustoAquisicao1').textContent = formatarValorMonetario(custoDeAquisicao);
+    
     // Repete o processo para as demais entradas e realiza os cálculos necessários.
     
   });
@@ -106,21 +106,25 @@ function toggleTooltip() {
     
   });
 
-  //document.getElementById('unidadeVariavel').addEventListener('input', function () {
-   // unidadeVariavel = parseFloat(this.value) || 0;
-  //  cenarioVariavel();
- //   graficoVariavel();
- // });
+  document.getElementById('unidadeVariavel').addEventListener('input', function () {
+    unidadeVariavel = parseFloat(this.value) || 0;
+    cenarioVariavel();
+    graficoVariavel();
+  });
 
   
 
   document.addEventListener("DOMContentLoaded", function () {
     // Adiciona o event listener ao botão de calcular
     document.getElementById("btn-calcular").addEventListener("click", function () {
-        calcularPrecoVenda(); // Chama a função para calcular o preço de venda
-        calculaPontoEquilibrio();
-        cenarioFixo();
-        graficoFixo();
+      var pontoEquilibrio = calculaPontoEquilibrio();
+      unidadeVariavel= document.getElementById('unidadeVariavel').value = pontoEquilibrio.pontoEquilibrioUnidade;
+      cenarioVariavel();  
+      calcularPrecoVenda(); // Chama a função para calcular o preço de venda
+      //calculaPontoEquilibrio();
+      cenarioFixo();
+        
+      //graficoFixo();
     });
 });
 
@@ -148,6 +152,7 @@ function toggleTooltip() {
     document.getElementById('precoVenda').textContent = formatarValorMonetario(precoVenda);
     document.getElementById('precoVenda1').textContent = formatarValorMonetario(precoVenda);
     
+    var cemPorCento = 100;
     // Atualiza os elementos na nova seção com os valores calculados
     document.getElementById('cenarioCustoAquisicao').textContent = formatarValorMonetario(custoDeAquisicao);
     document.getElementById('cenarioPercentualCusto').textContent = `${percentualCusto.toFixed(2)}`;
@@ -155,8 +160,10 @@ function toggleTooltip() {
     document.getElementById('cenarioReceitaMensal').textContent = formatarValorMonetario(receitaMensal);
     document.getElementById('cenarioPorcentagemLucro').textContent = `${porcentagemLucro.toFixed(2)}`;
     document.getElementById('precoVenda').textContent = formatarValorMonetario(precoVenda);
+    document.getElementById('cenarioCustoAquisicao1').textContent = formatarValorMonetario(custoDeAquisicao);
+    document.getElementById('cemPorCento').textContent = `${cemPorCento.toFixed(0)}%`;
+    document.getElementById('cemPorCento1').textContent = `${cemPorCento.toFixed(0)}%`;
     
-    console.log('Preço de Venda calculado:', precoVenda);
     return {
       precoVenda: precoVenda,
       CV: CV,
@@ -193,7 +200,6 @@ function toggleTooltip() {
     document.getElementById('pontoEquilibrioReal').textContent = formatarValorMonetario(pontoEquilibrioReal);
     document.getElementById('pontoEquilibrioUnidade').textContent = `${pontoEquilibrioUnidade.toFixed(0)}`;
   
-    console.log('Ponto de Equilíbrio calculado:', pontoEquilibrioReal, pontoEquilibrioUnidade);
     return {
       pontoEquilibrioUnidade: pontoEquilibrioUnidade
     }
@@ -277,6 +283,7 @@ function toggleTooltip() {
     document.getElementById('margemLucroVariavel2').textContent = formatarValorMonetario(margemLucroVariavel);    
     document.getElementById('margemLucroVariavelPorcentagem2').textContent = `${margemLucroVariavelPorcentagem.toFixed(2)}`;
     document.getElementById('markup2').textContent = `${markup2.toFixed(2)}`;
+    
 
     return {
       margemLucroVariavelPorcentagem: margemLucroVariavelPorcentagem,
