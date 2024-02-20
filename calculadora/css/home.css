@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #eb8cc5;
+    background-color: #dd63ff;
     padding: 8px 2%;
     display: flex;
     justify-content: space-between;    
@@ -145,6 +145,13 @@ header nav {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.graficos {
+    width: 370px;
+    height: 370px;
+    margin: 0 auto;
+    display: block;
 }
 
 /* .sidebar {
@@ -306,7 +313,7 @@ header nav {
 .btn-calcular-produtos {
     display: block;
     width: 100%;
-    background: #0056b3;
+    background: #bd13ec;
     color: white;
     padding: 10px 0;
     border: none;
@@ -318,12 +325,12 @@ header nav {
 }
 
 .btn-calcular-produtos:hover {
-    background-color: #003d82;
+    background-color: #dd63ff;
 }
 .btn-calcular-produtos2 {
     display: block;
     width: 25%;
-    background: #0056b3;
+    background: #bd13ec;
     color: white;
     padding: 10px 0;
     border: none;
@@ -335,7 +342,7 @@ header nav {
 }
 
 .btn-calcular-produtos2:hover {
-    background-color: #003d82;
+    background-color: #dd63ff;
 }
 
 

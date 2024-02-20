@@ -391,6 +391,12 @@ document.addEventListener("DOMContentLoaded", function () {
         datasets: [{
           label: 'Distribuição %',
           data: valoresFixo,
+          backgroundColor: [
+            '#bd13ec',   // Roxo (cor média)
+            '#dd63ff',  // Rosa médio
+            '#ff97d9',  // Rosa mais claro
+            '#ff69b4'  // Rosa mais escuro
+        ],
           hoverOffset: 4
         }]
       }
@@ -413,14 +419,20 @@ document.addEventListener("DOMContentLoaded", function () {
       resultadoFixo.porcentagemDespesaFixaVariavelPorcento]
 
       chartInstance = new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Margem de Lucro', 'Custo Aquisição', 'Custo Variável', 'Despesa Fixa'],
-        datasets: [{
-          label: 'Distribuição %',
-          data: valoresFixo,
-          hoverOffset: 4
-        }]
-      }
-    });
+        type: 'doughnut',
+        data: {
+          labels: ['Margem de Lucro', 'Custo Aquisição', 'Custo Variável', 'Despesa Fixa'],
+          datasets: [{
+            label: 'Distribuição %',
+            data: valoresFixo,
+            backgroundColor: [
+              '#bd13ec',   // Roxo (cor média)
+              '#dd63ff',  // Rosa médio
+              '#ff97d9',  // Rosa mais claro
+              '#ff69b4'  // Rosa mais escuro
+          ],
+            hoverOffset: 4
+          }]
+        }
+      });
   }
