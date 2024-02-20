@@ -106,11 +106,12 @@ function toggleTooltip() {
     
   });
 
-  document.getElementById('unidadeVariavel').addEventListener('input', function () {
+  /*document.getElementById('unidadeVariavel').addEventListener('input', function () {
     unidadeVariavel = parseFloat(this.value) || 0;
     cenarioVariavel();
-    graficoVariavel();
-  });
+    //graficoVariavel();
+    chartsVariavel();
+  });*/
 
   
 
@@ -124,7 +125,21 @@ function toggleTooltip() {
       //calculaPontoEquilibrio();
       cenarioFixo();        
       //graficoFixo();
+      chartsFixo();
+      chartsVariavel();
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Adiciona o event listener ao botão de calcular
+  document.getElementById("btn-calcular-variavel").addEventListener("click", function () {
+      // Obtém o valor de unidadeVariavel do input
+      unidadeVariavel = parseFloat(document.getElementById('unidadeVariavel').value) || 0;
+
+      // Chama as funções para atualizar o cenário e os gráficos
+      cenarioVariavel();
+      chartsVariavel();
+  });
 });
 
   // Função para calcular e exibir o preço de venda
@@ -359,4 +374,53 @@ function toggleTooltip() {
   }
 
 
-  
+  function chartsFixo(){
+    const ctx = document.getElementById('chartsFixo');
+
+    let resultadoFixo = cenarioFixo();
+    let valoresFixo = [
+      resultadoFixo.margemLucroFixoPorcentagem,
+      resultadoFixo.custoAquisicaoFixo,
+      resultadoFixo.custoVariavelFixoPorcentagem,
+      resultadoFixo.porcentagemDespesaFixaFixoPorcento]
+
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Margem de Lucro', 'Custo Aquisição', 'Custo Variável', 'Despesa Fixa'],
+        datasets: [{
+          label: 'Distribuição %',
+          data: valoresFixo,
+          hoverOffset: 4
+        }]
+      }
+    });
+  }
+  function chartsVariavel(){
+    const ctx = document.getElementById('chartsVariavel');
+    let chartInstance = Chart.getChart(ctx); // Obtém a instância do gráfico
+
+    // Se a instância do gráfico existir, destrua-o
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+
+    let resultadoFixo = cenarioVariavel();
+    let valoresFixo = [
+      resultadoFixo.margemLucroVariavelPorcentagem,
+      resultadoFixo.custoAquisicaoVariavelPorcentagem,
+      resultadoFixo.porcentagemCustoVariavel,
+      resultadoFixo.porcentagemDespesaFixaVariavelPorcento]
+
+      chartInstance = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Margem de Lucro', 'Custo Aquisição', 'Custo Variável', 'Despesa Fixa'],
+        datasets: [{
+          label: 'Distribuição %',
+          data: valoresFixo,
+          hoverOffset: 4
+        }]
+      }
+    });
+  }

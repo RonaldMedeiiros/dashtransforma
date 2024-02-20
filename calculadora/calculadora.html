@@ -8,6 +8,7 @@
     <title>Dashboard Transforma</title>
     <link rel="stylesheet" href="css/home.css">
     <script src="https://kit.fontawesome.com/b97523014d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -164,7 +165,11 @@
                 </div>
 
                 <div class="grid-produtos">
-                    <div class="section-title-produtos">Tabela Fixa - Preço Individual</div>
+                    <div class="section-title-produtos">Tabela/Gráfico Fixa</div>
+                    <div>
+                        <canvas id="chartsFixo"></canvas>
+                      </div>
+                    <div class="section-title-produtos"></div>                    
                     <div class="input-group-produtos">
                         <label class="outrovalor" id="unidadeVendidaFixo">Preço por unidade: </label>
                         <input type="number" id="unidadeFixa" value="1" readonly />
@@ -255,10 +260,15 @@
                     <!-- Campos para custos de transação -->
                 </div>
                 <div class="grid-produtos">
-                    <div class="section-title-produtos">Tabela Variável - Preço por quantidade</div>
+                    <div class="section-title-produtos">Tabela/Gráfico Variável</div>
+                    <div>
+                        <canvas id="chartsVariavel"></canvas>
+                      </div>
+                    <div class="section-title-produtos"></div>
                     <div class="input-group-produtos">
                         <label class="outrovalor" id="unidadeVendidaVariavel">Unidades Vendidas: </label>
                         <input type="number" id="unidadeVariavel" placeholder="Unidades" />
+                        <button id="btn-calcular-variavel" class="btn-calcular-produtos2" type="button">Calcular</button>
                     </div>
                     <div class="section-title-produtos"></div>
                     <table>

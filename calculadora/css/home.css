@@ -244,6 +244,24 @@ header {
 .btn-calcular-produtos:hover {
     background-color: #003d82;
 }
+.btn-calcular-produtos2 {
+    display: block;
+    width: 100%;
+    background: #0056b3;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-calcular-produtos2:hover {
+    background-color: #003d82;
+}
+
 
 .campo-container {
     font-size: 15px;
