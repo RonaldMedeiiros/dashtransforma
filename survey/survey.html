@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Transforma</title>
-    <link rel="stylesheet" href="calculadora/css/home.css">
+    <link rel="stylesheet" href="../calculadora/css/home.css">
     <script src="https://kit.fontawesome.com/b97523014d.js" crossorigin="anonymous"></script>
+    <!-- script do survey -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/survey-jquery/defaultV2.min.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/survey-jquery/survey.jquery.min.js"></script>
+    <!-- ... -->
 </head>
 
 <body>
@@ -26,8 +31,8 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="calculadora/calculadora.html">Calculadora</a></li>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../calculadora/calculadora.html">Calculadora</a></li>
                 <li><a href="survey/survey.html">Survey</a></li>
                 <!-- <li><a href="https://www.transformaempresas.com.br">Nossa página</a></li> -->
             </ul>
@@ -47,12 +52,12 @@
         </div>--><!--sidebar-->
         <div class="content">
             <div class="titulo-secao">
-                <h2>Início</h2>
+                <h2>Survey</h2>
                 <div class="separator"></div>
-                <p><i class="fa-solid fa-house"></i> / Sua empresa será transformada com a nossa plataforma.</p>
+                <p><i class="fa-solid fa-house"></i> / Perguntas do Survey</p>
             </div>
             <div>
-                <iframe src="https://www.transformaempresas.com.br" frameborder="0" style="width: 100% ; height: 750px;"></iframe>
+                <div id="surveyContainer"></div>
             </div>
             <!--<div class="box-info">
                 <div style="background: linear-gradient(45deg, #FF5370, #fc8a9d);" class="box-info-single">
@@ -131,7 +136,8 @@
         </div><!--content-->
     </section><!--main-->
 
-    <script src="mobile-navbar.js"></script>
+    <script src="survey.js"></script>
+    <script src="../mobile-navbar.js"></script>
 </body>
 
 </html>
