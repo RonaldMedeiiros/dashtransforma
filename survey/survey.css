@@ -1,0 +1,79 @@
+/* Personalização básica do survey */
+.sv_container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.sv_q_title {
+    color: #333;
+}
+
+.sv_row {
+    margin-bottom: 15px;
+}
+
+.sv_q_radiogroup_control_label {
+    margin-left: 5px;
+}
+
+.sv_q_cbx_label {
+    margin-left: 5px;
+}
+
+.sv_complete_btn, .sv_prev_btn, .sv_next_btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.sv_complete_btn:hover, .sv_prev_btn:hover, .sv_next_btn:hover {
+    background-color: #45a049;
+}
+
+.sd-btn .sd-navigation__next-btn {
+    display: block;
+    width: 100%;
+    background: #bd13ec !important;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.ola {
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #d6dce4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sv-string-viewer {
+    visibility: visible;
+    max-height: 100px;
+}
+
+.sd-navigation__complete-btn {
+    display: block;
+    width: 100%;
+    background: #bd13ec !important;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+

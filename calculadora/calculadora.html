@@ -97,8 +97,15 @@
                     <div class="section-title-produtos">Etapa 1 - Custos de Venda</div>
                     <div class="input-group-produtos">
                         <label for="custoAquisicaoInput">Custo de aquisição do produto:</label>
-                        <input type="text" id="custoAquisicaoInput" placeholder="R$0,00">
+                        <input type="text" id="custoAquisicaoInput" placeholder="R$0,00">                         
+                        <i class="fa-solid fa-circle-info" onclick="toggleTooltip()"></i>
                     </div>
+                    <div class="tooltip-message" id="tooltipMessage" style="display:none;">
+                        Calcule o custo para produzir seu produto ou fornecer seu serviço. Inclua tudo o que é necessário para
+                        que ele possa ser oferecido, como matéria-prima e insumos. Por exemplo, no caso de bolos, conte os
+                        custos de farinha, ovos e chocolate. Este é o seu custo de aquisição (CA).
+                        
+                      </div>
                     <div class="input-group-produtos">
                         <label for="percentualCustoInput">Custos variáveis do produto:</label>
                         <input type="number" id="percentualCustoInput" placeholder="00%">

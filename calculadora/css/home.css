@@ -474,3 +474,8 @@ tbody tr {
     margin-left: auto;
     /* Isso empurrará o .valor-lucro para a extrema direita dentro do .container-lucro */
 }
+
+.tooltip-message {
+    font-size: 12px;
+    color: #657c9a;
+}
