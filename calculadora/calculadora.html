@@ -109,19 +109,39 @@
                     <div class="input-group-produtos">
                         <label for="percentualCustoInput">Custos variáveis do produto:</label>
                         <input type="number" id="percentualCustoInput" placeholder="00%">
+                        <i class="fa-solid fa-circle-info" onclick="toggleTooltip2()"></i>
                     </div>
+                    <div class="tooltip-message" id="tooltipMessage2" style="display:none;">
+                        Registre a porcentagem dos custos que variam conforme você realiza vendas. Isso inclui despesas como
+                        taxas de cartão e comissões. Esses são seus custos variáveis (CV).
+                      </div>
                     <div class="input-group-produtos">
                         <label for="despesaFixaInput">Despesas fixas mensais:</label>
                         <input type="number" id="despesaFixaInput" placeholder="R$0,00">
+                        <i class="fa-solid fa-circle-info" onclick="toggleTooltip3()"></i>
                     </div>
+                    <div class="tooltip-message" id="tooltipMessage3" style="display:none;">
+                        Anote os custos que permanecem os mesmos, não importa quantas vendas você faça. Isso inclui aluguel,
+                        salários, e outros gastos regulares. Estas são suas despesas fixas (DF).
+                      </div>
                     <div class="input-group-produtos">
                         <label for="receitaMensalInput">Receita mensal do seu negócio</label>
                         <input type="number" id="receitaMensalInput" placeholder="R$0,00">
+                        <i class="fa-solid fa-circle-info" onclick="toggleTooltip4()"></i>
                     </div>
+                    <div class="tooltip-message" id="tooltipMessage4" style="display:none;">
+                        Qual o total de dinheiro que realmente entra no seu negócio todo mês? Este valor é a sua receita
+                        mensal (RM), que representa o dinheiro efetivamente recebido, não apenas as vendas realizadas.
+                      </div>
                     <div class="input-group-produtos">
                         <label for="porcentagemLucroInput">Margem de lucro desejada:</label>
                         <input type="number" id="porcentagemLucroInput" placeholder="00%">
+                        <i class="fa-solid fa-circle-info" onclick="toggleTooltip5()"></i>
                     </div>
+                    <div class="tooltip-message" id="tooltipMessage5" style="display:none;">
+                        Defina o lucro que você almeja obter por venda. Isso determinará a sua margem de lucro (ML), que é o
+                        percentual de ganho desejado sobre cada produto ou serviço vendido.
+                      </div>
 
                     <div class="section-title-produtos"></div>
                     <br>

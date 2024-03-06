@@ -77,3 +77,21 @@
     transition: background-color 0.3s ease;
 }
 
+.container-produtos select {
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.container-produtos p {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+}

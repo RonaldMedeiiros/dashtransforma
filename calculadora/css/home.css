@@ -477,5 +477,12 @@ tbody tr {
 
 .tooltip-message {
     font-size: 12px;
-    color: #657c9a;
+    color: #ff5622;
+    margin-bottom: 15px;
+}
+
+.fa-circle-info {
+    padding: 5px;
+    color: #666666;
+    opacity: 30%;
 }

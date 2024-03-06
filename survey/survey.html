@@ -42,103 +42,80 @@
     </header>
 
     <section class="main">
-        <!--<div class="sidebar">
-            <h3>Home</h3>
-            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-            <a class="sidebar-active" href="#"><i class="fa-solid fa-calculator"></i> Calculadora</a>
-            <a href="#"><i class="fa-solid fa-house"></i> Outro</a>
-            <a href="#"><i class="fa-solid fa-house"></i> Outro</a>
-            <a href="#"><i class="fa-solid fa-house"></i> Outro</a>
-            <br>
-            <div class="separator"></div>
-        </div>--><!--sidebar-->
         <div class="content">
             <div class="titulo-secao">
                 <h2>Survey</h2>
                 <div class="separator"></div>
                 <p><i class="fa-solid fa-house"></i> / Perguntas do Survey</p>
             </div>
-            <div>
-                <div id="surveyElement"></div>
-            </div>
-            <!--<div class="box-info">
-                <div style="background: linear-gradient(45deg, #FF5370, #fc8a9d);" class="box-info-single">
-                    <div class="info-text">
-                        <h3>Total Sales</h3>
-                        <p>R$ 1.000,00</p>
-                    </div>
-                    <i class="fa-solid fa-money-check-dollar"></i>
-                </div>
-                <div style="background: linear-gradient(90deg, rgba(46,157,214,1) 0%, rgba(46,192,226,1) 50%);"
-                    class="box-info-single">
-                    <div class="info-text">
-                        <h3>Total Sales</h3>
-                        <p>R$ 1.000,00</p>
-                    </div>
-                    <i class="fa-solid fa-money-check-dollar"></i>
-                </div>
-                <div style="background: linear-gradient(90deg, rgba(46,214,88,1) 0%, rgba(46,226,157,1) 50%);"
-                    class="box-info-single">
-                    <div class="info-text">
-                        <h3>Total Sales</h3>
-                        <p>R$ 1.000,00</p>
-                    </div>
-                    <i class="fa-solid fa-money-check-dollar"></i>
-                </div>
-                <div style="background: linear-gradient(90deg, rgba(173,58,180,1) 0%, rgba(190,29,253,1) 50%);"
-                    class="box-info-single">
-                    <div class="info-text">
-                        <h3>Total Sales</h3>
-                        <p>R$ 1.000,00</p>
-                    </div>
-                    <i class="fa-solid fa-money-check-dollar"></i>
-                </div>
-                <div style="background: linear-gradient(90deg, rgba(214,153,46,1) 0%, rgba(226,172,46,1) 50%);"
-                    class="box-info-single">
-                    <div class="info-text">
-                        <h3>Total Sales</h3>
-                        <p>R$ 1.000,00</p>
-                    </div>
-                    <i class="fa-solid fa-money-check-dollar"></i>
-                </div>
-            </div> 
+
             <div class="container-produtos">
                 <div class="grid-produtos">
-                    <div class="section-title-produtos">Etapa 1 - Custos de Venda</div>
-                    <div class="input-group-produtos">
-                        <label for="nomeProduto">Custo de aquisição do produto:</label>
-                        <input type="text" id="nomeProduto" placeholder="Sem descrição">
-                    </div>
-                    <div class="input-group-produtos">
-                        <label for="custoUnitario">Custos variáveis do produto:</label>
-                        <input type="number" id="custoUnitario" placeholder="R$0,00">
-                    </div>
-                    <div class="input-group-produtos">
-                        <label for="valorFrete">Despesas fixas mensais:</label>
-                        <input type="number" id="valorFrete" placeholder="R$0,00">
-                    </div>
-                    <div class="input-group-produtos">
-                        <label for="valorFrete">Receita mensal do seu negócio</label>
-                        <input type="number" id="valorFrete" placeholder="R$0,00">
-                    </div>
-                    <div class="input-group-produtos">
-                        <label for="valorFrete">Margem de lucro desejada:</label>
-                        <input type="number" id="valorFrete" placeholder="R$0,00">
-                    </div>-->
+                    <h1 style="text-align: center;">Diagnóstico Empresarial - ESTRATÉGIA</h1>
+                    <br>
+                    <h3 style="text-align: justify;">A empresa possui diretrizes estratégicas bem definidas e disseminadas por toda a empresa?</h3>
+                    <br>
+                    <select id="frases1" onchange="estrategia1()">
+                        <option value="" disabled selected>Selecione uma frase</option>
+                        <option value="0">A empresa não possui negócio definido ou compreendido por toda a empresa.</option>
+                        <option value="1">Nem todas as diretrizes estão definidas. Ex: a empresa sabe sua missão, mas não o seu público alvo.</option>
+                        <option value="2">A empresa ainda não tem clareza sobre o seu diferencial de valor.</option>
+                        <option value="3">A empresa possui diretrizes bem definidas, as quais são de conhecimento em todos os níveis da mesma.</option>
+                    </select>
+                    <br>
+                    <p id="resposta1"></p>
 
-                    <!-- Repita a estrutura para os outros campos conforme necessário -->
+                    <div class="section-title-produtos"></div>
 
-                    <!--<div class="section-title-produtos">Etapa 2 - Custos de transação</div>-->
-                    <!-- Campos para custos de transação -->
+                    <h3 style="text-align: justify;">De que modo a empresa realiza seu planejamento estratégico?</h3>
+                    <br>
+                    <select id="frases2" onchange="estrategia2()">
+                        <option value="" disabled selected>Selecione uma frase</option>
+                        <option value="0"> A empresa não possui planejamento estratégico.</option>
+                        <option value="1"> A empresa possui um Planejamento Estratégico de forma "prática", sem um processo formal.</option>
+                        <option value="2"> A empresa realiza o Planejamento Estratégico como um processo formal e periódico.</option>
+                        <option value="3"> A empresa realiza seu Planejamento Estratégico de forma sistematizada.</option>
+                    </select>
+                    <br>
+                    <p id="resposta2"></p>
+                    <div class="section-title-produtos"></div>
 
-                    <!--<button class="btn-calcular-produtos" type="button">CALCULAR</button>
+                    <h3 style="text-align: justify;">A empresa utiliza métodos de análise de informações para formular suas estratégias?</h3>
+                    <br>
+                    <select id="frases3" onchange="estrategia3()">
+                        <option value="" disabled selected>Selecione uma frase</option>
+                        <option value="0"> A empresa não analisa informações para formular estratégias.</option>
+                        <option value="1"> A empresa analisa as informações de modo informal, empiricamente.</option>
+                        <option value="2"> A empresa analisa ambientes interno e externo para apoiar à formulação estratégica.</option>
+                        <option value="3"> A empresa analisa todos os fatores que interferem na sua estratégia colaborativamente.</option>
+                    </select>
+                    <br>
+                    <p id="resposta3"></p>
+                    <div class="section-title-produtos"></div>
+
+                    <h3 style="text-align: justify;">Como a empresa emprega os conceitos de responsabilidade sócio-empresarial?</h3>
+                    <br>
+                    <select id="frases4" onchange="estrategia4()">
+                        <option value="" disabled selected>Selecione uma frase</option>
+                        <option value="0"> A empresa não possui iniciativas de responsabilidade social.</option>
+                        <option value="1"> A empresa possui iniciativas indiretas, através do incentivo à parceiros.</option>
+                        <option value="2"> A empresa possui iniciativas com clientes e fornecedores.</option>
+                        <option value="3"> A empresa  tem missão que agrega valor aos "stackholders" e preocupa-se com meio ambiente, além de incentivar seus fornecedores e clientes.</option>
+                    </select>
+                    <br>
+                    <p id="resposta4"></p>
+                    <div class="section-title-produtos"></div>
+
+                    <h2 style="text-align: justify;">Resultado Final: <p id="pontuacaoFinalEstrategia"></p></h2>
+
+
                 </div>
-            </div>-->
 
-        </div><!--content-->
+            </div><!--content-->
     </section><!--main-->
 
     <script src="survey.js"></script>
+    <script src="survey2.js"></script>
     <script src="../mobile-navbar.js"></script>
 </body>
 
