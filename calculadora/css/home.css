@@ -11,14 +11,66 @@ body {
 }
 
 header {
-    background-color: #eb8cc5;
+    background-color: #333533;
     padding: 8px 2%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #F5CB5C; /* Amarelo mostarda */
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 22px;
+    color: #333533;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+section ul, section ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+section ul li, section ol li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #333533;
+    color: #F5CB5C; /* Amarelo mostarda */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
 
 .info-header {
-    color: white;
+    color: #F5CB5C; /* Amarelo mostarda */
     display: flex;
     justify-content: space-around;
     width: 200px;
@@ -53,6 +105,7 @@ header {
 .logo h3 {
     font-size: 12px;
     cursor: pointer;
+    color: #F5CB5C; /* Amarelo mostarda */
 }
 
 .logo h3:hover {
@@ -74,20 +127,19 @@ header {
 
 .sidebar {
     width: 15%;
-    background-color: rgb(255, 206, 244);
-    height: 100%;
+    background-color: #F5CB5C; /* Amarelo mostarda */
 }
 
 .sidebar a.sidebar-active {
-    border-left: 4px solid #eb8cc5;
-    background-color: rgb(245, 245, 245);
+    border-left: 4px solid #333533;
+    background-color: #f5f5f5;
     color: #777;
     font-weight: bold;
 }
 
 .sidebar a:hover {
-    border-left: 4px solid #eb8cc5;
-    background-color: rgb(245, 245, 245);
+    border-left: 4px solid #333533;
+    background-color: #f5f5f5;
     color: #777;
     font-weight: bold;
 }
@@ -97,7 +149,7 @@ header {
 }
 
 .sidebar h3 {
-    color: #333;
+    color: #333533;
     font-size: 20px;
     margin: 10px;
 }
@@ -115,8 +167,25 @@ header {
 
 .content {
     width: 85%;
-    background-color: rgb(245, 245, 245);
+    background-color: #f5f5f5;
     padding: 20px;
+}
+
+.paragrafos {
+    width: 85%;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.paragrafos h2 {
+    font-size: 20px;
+    color: #333533;
+    margin-bottom: 20px;
+}
+
+.paragrafos ul, ol {
+    margin: 20px 0; /* Espaçamento acima e abaixo da lista */
+    padding-left: 50px; /* Espaçamento à esquerda dos itens da lista */
 }
 
 .titulo-secao {
@@ -134,13 +203,13 @@ header {
 }
 
 .titulo-secao i {
-    color: #f7bee0;
+    color: #F5CB5C; /* Amarelo mostarda */
 }
 
 .separator {
     width: 100%;
     height: 1px;
-    background-color: rgb(240, 240, 240);
+    background-color: #f0f0f0;
 }
 
 .box-info {
@@ -148,7 +217,6 @@ header {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .box-info-single {
@@ -159,13 +227,12 @@ header {
     width: 100%;
     margin: 0 10px;
     padding: 30px;
-
+    background-color: #333533;
 }
 
 .box-info-single i {
     font-size: 28px;
 }
-
 
 .container-produtos {
     display: grid;
@@ -183,10 +250,16 @@ header {
 
 .section-title-produtos {
     font-size: 18px;
-    color: #333;
+    color: #333533;
     border-bottom: 1px solid #d6dce4;
     padding-bottom: 10px;
     margin-bottom: 20px;
+}
+
+details {
+    color: #f56e5c; /* Amarelo mostarda */
+    opacity: 0.8;
+    padding: 25px;
 }
 
 .input-group-produtos {
@@ -230,8 +303,8 @@ header {
 .btn-calcular-produtos {
     display: block;
     width: 100%;
-    background: #0056b3;
-    color: white;
+    background: #333533;
+    color: #F5CB5C; /* Amarelo mostarda */
     padding: 10px 0;
     border: none;
     border-radius: 4px;
@@ -242,13 +315,14 @@ header {
 }
 
 .btn-calcular-produtos:hover {
-    background-color: #003d82;
+    background-color: #292b2c;
 }
+
 .btn-calcular-produtos2 {
     display: block;
     width: 100%;
-    background: #0056b3;
-    color: white;
+    background: #333533;
+    color: #F5CB5C; /* Amarelo mostarda */
     padding: 10px 0;
     border: none;
     border-radius: 4px;
@@ -259,9 +333,8 @@ header {
 }
 
 .btn-calcular-produtos2:hover {
-    background-color: #003d82;
+    background-color: #292b2c;
 }
-
 
 .campo-container {
     font-size: 15px;
@@ -307,56 +380,55 @@ table {
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    position: relative
+    position: relative;
 }
 
 table * {
-    position: relative
+    position: relative;
 }
 
 table td,
 table th {
     border: 1px solid #eaeaea;
-    padding-left: 8px ;  
+    padding-left: 8px;
 }
 
 table thead tr {
     font-size: 10px;
     height: 20px;
-    background: #dca2f7
+    background: #F5CB5C; /* Amarelo mostarda */
 }
 
-
 table tbody tr {
-    height: 30px
+    height: 30px;
 }
 
 table tbody tr:last-child {
-    border: 0
+    border: 0;
 }
 
 table td,
 table th {
-    text-align: left
+    text-align: left;
 }
 
 table td.l,
 table th.l {
-    text-align: right
+    text-align: right;
 }
 
 table td.c,
 table th.c {
-    text-align: center
+    text-align: center;
 }
 
 table td.r,
 table th.r {
-    text-align: center
+    text-align: center;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
 }
 
 tbody tr {
@@ -364,11 +436,12 @@ tbody tr {
     font-size: 15px;
     color: rgb(8, 8, 8);
     line-height: 1.2;
-    font-weight: unset
+    font-weight: unset;
 }
+
 .indice-tabela {
     width: 150px;
-  }
+}
 
 .container-lucro {
     display: flex;
