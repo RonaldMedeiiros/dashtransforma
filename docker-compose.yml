@@ -12,6 +12,7 @@ services:
       - "traefik.http.routers.calculadora.tls.certresolver=myresolver"
     networks:
       - traefik_network
+    restart: always
 
 networks:
   traefik_network:
